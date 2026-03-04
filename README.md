@@ -39,6 +39,9 @@ The objective is to learn a policy $\pi_\theta$ maximizing expected return.
 
 ## Game Setting
 
+![Atari Pong Demo](game.gif)
+
+
 - **Game**: Atari Pong — the agent controls **one paddle**; the **other paddle is the built-in game AI** (the “computer”). The agent always plays against the same opponent.
 - **Episode**: Runs until one player scores **21 points**.
 - **Frame skip**: 4 (each action repeats for 4 frames).
@@ -261,6 +264,25 @@ The real Atari game is not rendered during training.
 
 **Display fix:** Observations are scaled from $[0,1]$ to $[0,255]$ for visualization so the grayscale image is visible.
 
+---
+
+## Results
+
+We are evaluating PPO performance only, since REINFORCE takes extremely long time to learn at least something, in case of such sparse reward and complex input.
+
+| Policy | Expected reward |
+|--------|--------------------|
+| REINFORCE | $\approx$ -20 |
+| **PPO** | $\approx$ **+20** |
+
+The PPO successfully learned almost optimal policy (expected reward 20 vs maximum reward 21) for such complex case as CNN-based input and pretty long game with rare rewards. 
+
+**PPO learning curve**:
+![alt text](ppo_training_results.png)
+
+
+---
+# Extras
 ---
 
 # Why is average return still about -20 after 80k steps?
