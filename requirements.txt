@@ -1,0 +1,9 @@
+# Reinforcement Learning - PPO vs REINFORCE on Atari Pong
+# Python >= 3.9
+
+gymnasium>=0.29.0
+ale-py>=0.10.0
+torch>=2.0.0
+numpy>=1.24.0
+pygame>=2.5.0
+opencv-python-headless>=4.8.0
