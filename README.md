@@ -10,6 +10,9 @@ Reinforcement learning project comparing **REINFORCE** (vanilla policy gradient)
 - **Episode**: Runs until one player scores **21 points** (standard Pong rules).
 - **Reward**: Sparse and delayed: **+1** when the agent wins a rally (scores a point), **−1** when it loses a rally. Hundreds of steps can pass with zero reward, making credit assignment difficult.
 
+![Atari Pong Demo](game.gif)
+
+
 ### How training works (who plays whom)
 
 During training, **the agent plays against the Atari game’s built-in AI**. Each “step” is a few frames (frame skip 4). The agent only gets a reward when a point is scored: +1 if the agent scored, −1 if the opponent scored. There is no human in the loop; the policy is updated from these rewards (REINFORCE or PPO).
